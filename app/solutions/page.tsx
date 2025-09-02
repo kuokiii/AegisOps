@@ -323,71 +323,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Real-World <span className="gradient-text">Use Cases</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how AegisOps transforms specific IT operations across different enterprise environments.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
-                <CardHeader>
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                      <useCase.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl">{useCase.title}</CardTitle>
-                      <Badge variant="secondary" className="mt-1">
-                        {useCase.industry}
-                      </Badge>
-                    </div>
-                  </div>
-                  <p className="text-gray-600">{useCase.description}</p>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenges:</h4>
-                      <div className="space-y-1">
-                        {useCase.challenges.map((challenge, idx) => (
-                          <div key={idx} className="flex items-center text-sm text-gray-600">
-                            <AlertTriangle className="w-4 h-4 text-red-500 mr-2" />
-                            {challenge}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
-                      <p className="text-sm text-gray-600">{useCase.solution}</p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                      <div className="space-y-1">
-                        {useCase.results.map((result, idx) => (
-                          <div key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            {result}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Industry Solutions */}
       <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
