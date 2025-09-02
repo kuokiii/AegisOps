@@ -9,7 +9,6 @@ export default function Footer() {
     product: [
       { name: "Platform", href: "/platform" },
       { name: "Solutions", href: "/solutions" },
-      { name: "Pricing", href: "/pricing" },
     ],
     company: [
       { name: "About", href: "/about" },
