@@ -43,6 +43,35 @@ export default function ValuePropsSection() {
   ]
 
   return (
-    
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900">
+            Why <span className="gradient-text">AegisOps</span>
+          </h2>
+          <p className="text-gray-600 mt-3">Tangible outcomes across efficiency, reliability, and security.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {benefits.map((b, i) => {
+            const Icon = b.icon
+            return (
+              <Card key={i} className="border-0 shadow-lg bg-white hover:shadow-xl transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900">{b.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-3">{b.description}</p>
+                  <div className="text-sm text-gray-500">{b.metric}</div>
+                </CardContent>
+              </Card>
+            )
+          })}
+        </div>
+      </div>
+    </section>
   )
 }
