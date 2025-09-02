@@ -14,7 +14,6 @@ import {
   CheckCircle,
   Search,
   Lock,
-  Cloud,
   Server,
   ArrowRight,
   Code,
@@ -101,29 +100,6 @@ export default function PlatformPage() {
     },
   ]
 
-  const securityFeatures = [
-    {
-      icon: Lock,
-      title: "Zero PII Exposure",
-      description: "Complete data privacy with no personal information exposure or exfiltration.",
-    },
-    {
-      icon: Shield,
-      title: "SOC 2 Compliance",
-      description: "Enterprise-grade security standards with ongoing SOC 2 certification process.",
-    },
-    {
-      icon: Eye,
-      title: "Audit Trails",
-      description: "Comprehensive logging and traceability for all AI actions and decisions.",
-    },
-    {
-      icon: Server,
-      title: "Hybrid Deployment",
-      description: "On-premises agents for compliance with cloud control for coordination.",
-    },
-  ]
-
   const integrations = [
     { name: "VMware vSphere", category: "Infrastructure", status: "Full Support" },
     { name: "Kubernetes", category: "Container Orchestration", status: "Roadmap" },
@@ -137,57 +113,6 @@ export default function PlatformPage() {
     { name: "Azure", category: "Cloud Platform", status: "Roadmap" },
     { name: "GCP", category: "Cloud Platform", status: "Roadmap" },
     { name: "Database Systems", category: "Data Management", status: "Partial Support" },
-  ]
-
-  const roadmapPhases = [
-    {
-      phase: "Phase 1 (MVP)",
-      timeline: "Q0-Q2 2025",
-      title: "Foundation & Core Automation",
-      features: [
-        "Dual-agent system with SOP automation",
-        "Logfire and Qdrant integration",
-        "Redis caching and context management",
-        "VMware and Database support",
-      ],
-      status: "In Progress",
-    },
-    {
-      phase: "Phase 2",
-      timeline: "Q2-Q4 2025",
-      title: "Multi-Agent Orchestration",
-      features: [
-        "Multi-agent orchestration system",
-        "Make/Metoro integrations",
-        "Enhanced HITL workflows",
-        "Pilot program execution",
-      ],
-      status: "Planned",
-    },
-    {
-      phase: "Phase 3",
-      timeline: "Q1-Q2 2026",
-      title: "Advanced AI & Compliance",
-      features: [
-        "Agentic RAG with memory",
-        "Compliance frameworks",
-        "Advanced evaluation systems",
-        "Inference optimizations",
-      ],
-      status: "Future",
-    },
-    {
-      phase: "Phase 4",
-      timeline: "Q3-Q4 2026",
-      title: "Enterprise Ecosystem",
-      features: [
-        "Advanced multi-agent systems",
-        "Temporal memory management",
-        "Full ecosystem expansion",
-        "Marketplace integrations",
-      ],
-      status: "Future",
-    },
   ]
 
   return (
@@ -347,53 +272,58 @@ export default function PlatformPage() {
 
             <TabsContent value="security" className="space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
-                {securityFeatures.map((feature, index) => (
-                  <Card key={index} className="border-0 shadow-lg bg-white">
-                    <CardContent className="p-8">
-                      <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                          <feature.icon className="w-6 h-6 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                <Card className="border-0 shadow-lg bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                        <Lock className="w-6 h-6 text-primary" />
                       </div>
-                      <p className="text-gray-600">{feature.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              <div className="mt-12 p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Hybrid AI Architecture</h3>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Server className="w-6 h-6 text-green-600" />
+                      <h3 className="text-xl font-semibold text-gray-900">Zero PII Exposure</h3>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">On-Premises Agents</h4>
-                      <p className="text-gray-600">For compliance and data sovereignty in regulated industries</p>
-                      <ul className="mt-2 space-y-1 text-sm text-gray-500">
-                        <li>• Local data processing</li>
-                        <li>• Regulatory compliance</li>
-                        <li>• Air-gapped environments</li>
-                      </ul>
+                    <p className="text-gray-600">
+                      Complete data privacy with no personal information exposure or exfiltration.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="border-0 shadow-lg bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                        <Shield className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">SOC 2 Compliance</h3>
                     </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Cloud className="w-6 h-6 text-blue-600" />
+                    <p className="text-gray-600">
+                      Enterprise-grade security standards with ongoing SOC 2 certification process.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="border-0 shadow-lg bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                        <Eye className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">Audit Trails</h3>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Cloud Control</h4>
-                      <p className="text-gray-600">Centralized coordination and management capabilities</p>
-                      <ul className="mt-2 space-y-1 text-sm text-gray-500">
-                        <li>• Global orchestration</li>
-                        <li>• Model updates</li>
-                        <li>• Analytics dashboard</li>
-                      </ul>
+                    <p className="text-gray-600">
+                      Comprehensive logging and traceability for all AI actions and decisions.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="border-0 shadow-lg bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                        <Server className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">Hybrid Deployment</h3>
                     </div>
-                  </div>
-                </div>
+                    <p className="text-gray-600">
+                      On-premises agents for compliance with cloud control for coordination.
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </TabsContent>
 
@@ -499,63 +429,8 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Roadmap */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Roadmap: <span className="gradient-text">Our Journey to Enterprise AI</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the phases of our development and how we plan to deliver enterprise-grade AI solutions.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {roadmapPhases.map((phase, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-white">
-                <CardHeader>
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                      <Shield className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl">{phase.phase}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{phase.description}</p>
-                  <div className="space-y-2">
-                    {phase.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT Operations?</h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              Experience the power of AegisOps Platform and take your IT operations to the next level.
-            </p>
-          </div>
-
-          <div className="flex justify-center">
-            <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Footer Section */}
       <Footer />
