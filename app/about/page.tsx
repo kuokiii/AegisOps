@@ -104,39 +104,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Now?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="font-semibold text-gray-900">LLM + RAG Maturity</div>
-                      <div className="text-gray-600">Context-aware reasoning is now reliable with guardrails</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Economic Pressure</div>
-                      <div className="text-gray-600">20-40% OPEX cuts demanded across IT departments</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Hybrid AI Demand</div>
-                      <div className="text-gray-600">Regulated sectors require on-prem AI execution</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Incumbent Gap</div>
-                      <div className="text-gray-600">Existing tools only observe, they don't act</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -186,79 +154,7 @@ export default function AboutPage() {
       </section>
 
       {/* Market Opportunity */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Market Opportunity</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Massive market opportunity with proven unit economics and clear path to scale.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-6 text-center">
-                <Globe className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-2xl font-bold text-gray-900 mb-2">$30-50B</div>
-                <div className="text-gray-600">Expandable TAM</div>
-                <div className="text-sm text-gray-500 mt-2">Across databases, Kubernetes, network</div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-6 text-center">
-                <Target className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-2xl font-bold text-gray-900 mb-2">$1B</div>
-                <div className="text-gray-600">Beachhead SOM</div>
-                <div className="text-sm text-gray-500 mt-2">Enterprise customers</div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-6 text-center">
-                <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-2xl font-bold text-gray-900 mb-2">$100K</div>
-                <div className="text-gray-600">Annual Contract Value</div>
-                <div className="text-sm text-gray-500 mt-2">100-500 VMs per customer</div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-6 text-center">
-                <Award className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-2xl font-bold text-gray-900 mb-2">80%+</div>
-                <div className="text-gray-600">Gross Margin</div>
-                <div className="text-sm text-gray-500 mt-2">Highly scalable business model</div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Growth Path */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Growth Trajectory</h3>
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-xl font-bold text-primary">Year 1</div>
-                <div className="text-2xl font-bold text-gray-900">$1M ARR</div>
-              </div>
-              <div className="hidden md:block">
-                <ArrowRight className="w-8 h-8 text-primary" />
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-xl font-bold text-primary">Year 2</div>
-                <div className="text-2xl font-bold text-gray-900">$5M ARR</div>
-              </div>
-              <div className="hidden md:block">
-                <ArrowRight className="w-8 h-8 text-primary" />
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-xl font-bold text-primary">Year 3</div>
-                <div className="text-2xl font-bold text-gray-900">$15M+ ARR</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Footer */}
       <Footer />
