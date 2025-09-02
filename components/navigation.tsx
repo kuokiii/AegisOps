@@ -42,7 +42,7 @@ export default function Navigation() {
             >
               Solutions
             </Link>
-            
+
             <Link
               href="/contact"
               className="text-gray-700 hover:text-primary transition-colors focus-ring rounded px-2 py-1"
@@ -93,12 +93,6 @@ export default function Navigation() {
                 className="text-gray-700 hover:text-primary transition-colors focus-ring rounded px-2 py-1"
               >
                 Solutions
-              </Link>
-              <Link
-                href="/pricing"
-                className="text-gray-700 hover:text-primary transition-colors focus-ring rounded px-2 py-1"
-              >
-                Pricing
               </Link>
               <Link
                 href="/contact"
