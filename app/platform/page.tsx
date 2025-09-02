@@ -2,7 +2,6 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import ScrollToTop from "@/components/scroll-to-top"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
@@ -504,41 +503,31 @@ export default function PlatformPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Platform Roadmap</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Roadmap: <span className="gradient-text">Our Journey to Enterprise AI</span>
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our systematic approach to building the most comprehensive agentic AI platform for enterprise IT.
+              Discover the phases of our development and how we plan to deliver enterprise-grade AI solutions.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {roadmapPhases.map((phase, index) => (
-              <Card
-                key={index}
-                className={`border-2 ${phase.status === "In Progress" ? "border-primary bg-primary/5" : "border-gray-200 bg-white"} shadow-lg`}
-              >
+              <Card key={index} className="border-0 shadow-lg bg-white">
                 <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge
-                      variant={
-                        phase.status === "In Progress"
-                          ? "default"
-                          : phase.status === "Planned"
-                            ? "secondary"
-                            : "outline"
-                      }
-                    >
-                      {phase.status}
-                    </Badge>
-                    <span className="text-sm text-gray-500">{phase.timeline}</span>
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                      <Shield className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl">{phase.phase}</CardTitle>
                   </div>
-                  <CardTitle className="text-lg">{phase.phase}</CardTitle>
-                  <p className="text-primary font-semibold">{phase.title}</p>
                 </CardHeader>
                 <CardContent>
+                  <p className="text-gray-600 mb-4">{phase.description}</p>
                   <div className="space-y-2">
                     {phase.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start text-sm text-gray-700">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                      <div key={idx} className="flex items-center text-sm text-gray-700">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
                         {feature}
                       </div>
                     ))}
@@ -551,7 +540,22 @@ export default function PlatformPage() {
       </section>
 
       {/* CTA Section */}
-      
+      <section className="py-16 bg-primary text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT Operations?</h2>
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
+              Experience the power of AegisOps Platform and take your IT operations to the next level.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* Footer Section */}
       <Footer />
