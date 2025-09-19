@@ -31,6 +31,12 @@ export default function Navigation() {
               About
             </Link>
             <Link
+              href="/team"
+              className="text-gray-700 hover:text-primary transition-colors focus-ring rounded px-2 py-1"
+            >
+              Team
+            </Link>
+            <Link
               href="/platform"
               className="text-gray-700 hover:text-primary transition-colors focus-ring rounded px-2 py-1"
             >
@@ -81,6 +87,12 @@ export default function Navigation() {
                 className="text-gray-700 hover:text-primary transition-colors focus-ring rounded px-2 py-1"
               >
                 About
+              </Link>
+              <Link
+                href="/team"
+                className="text-gray-700 hover:text-primary transition-colors focus-ring rounded px-2 py-1"
+              >
+                Team
               </Link>
               <Link
                 href="/platform"
